@@ -1,3 +1,8 @@
+package net.lwqzx.delegation
+
+import kotlin.properties.Delegates
+import kotlin.reflect.KProperty
+
 // 定义一个接口
 interface Base {
     fun printMessage()

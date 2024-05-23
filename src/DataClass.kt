@@ -1,3 +1,4 @@
+package net.lwqzx.dataclass
 data class User(
     val id: Int,            // 用户ID
     val name: String,       // 用户名
