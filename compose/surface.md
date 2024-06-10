@@ -10,6 +10,16 @@ Android Compose Surface 详细解释
 3. **阴影**：可以通过 elevation 属性设置阴影的大小，以便在视觉上区分不同的层次。
 4. **点击处理**：可以通过 onClick 属性处理点击事件。
 
+
+## Surface 的主要属性
+
+- color: 用于设置 Surface 的背景颜色。
+- shape: 用于设置 Surface 的形状，比如圆角矩形或其他自定义形状。
+- elevation: 用于设置 Surface 的阴影效果，从而实现浮动效果。
+- border: 用于设置 Surface 的边框。
+- content: 用于定义 Surface 中的内容。
+
+
 ### 代码示例
 
 下面是一个使用 Surface 组件的示例代码，代码包括一个简单的卡片布局，卡片有一个背景颜色、圆角、阴影效果以及点击事件。

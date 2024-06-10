@@ -1,8 +1,10 @@
+
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -30,7 +32,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MyApp() {
-    Ro()
+    BoxLayout()
 }
 
 @Preview(showBackground = true)
@@ -39,31 +41,32 @@ fun MyAppPreview() {
     MyApp()
 }
 
-
 @Composable
-fun Ro() {
-    Row(
+fun BoxLayout() {
+    Box(
         modifier = Modifier
             .fillMaxSize()
             .background(Color.LightGray),
-        horizontalArrangement = Arrangement.SpaceEvenly,
-        verticalAlignment = Alignment.CenterVertically
+        contentAlignment = Alignment.TopStart
     ) {
         Text(
-            text = "Item 1",
+            text = "TopStart",
             modifier = Modifier
+                .align(Alignment.TopStart)
                 .background(Color.Red)
                 .padding(8.dp)
         )
         Text(
-            text = "Item 2",
+            text = "Center",
             modifier = Modifier
+                .align(Alignment.Center)
                 .background(Color.Green)
                 .padding(8.dp)
         )
         Text(
-            text = "Item 3",
+            text = "BottomEnd",
             modifier = Modifier
+                .align(Alignment.BottomEnd)
                 .background(Color.Blue)
                 .padding(8.dp)
         )

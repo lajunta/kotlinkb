@@ -1,12 +1,15 @@
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -14,10 +17,12 @@ import androidx.compose.ui.Alignment
 
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-
+import dev.lamy.hello.R
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +35,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MyApp() {
-    Ro()
+    ImageExample()
 }
 
 @Preview(showBackground = true)
@@ -39,33 +44,24 @@ fun MyAppPreview() {
     MyApp()
 }
 
-
 @Composable
-fun Ro() {
-    Row(
+fun ImageExample() {
+    Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.LightGray),
-        horizontalArrangement = Arrangement.SpaceEvenly,
-        verticalAlignment = Alignment.CenterVertically
+            .padding(16.dp),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(
-            text = "Item 1",
-            modifier = Modifier
-                .background(Color.Red)
-                .padding(8.dp)
-        )
-        Text(
-            text = "Item 2",
-            modifier = Modifier
-                .background(Color.Green)
-                .padding(8.dp)
-        )
-        Text(
-            text = "Item 3",
-            modifier = Modifier
-                .background(Color.Blue)
-                .padding(8.dp)
+        // 加载并显示图片
+        Image(
+            painter = painterResource(id = R.drawable.boy),
+            contentDescription = "Example Image",
+            modifier = Modifier.size(200.dp)
+                .border(2.dp, Color.Black)
+                .background(Color.LightGray, shape = CircleShape)
+                .padding(16.dp),
+            contentScale = ContentScale.Crop
         )
     }
 }

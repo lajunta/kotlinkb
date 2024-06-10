@@ -1,0 +1,32 @@
+background 背景
+padding 填充
+vertical 垂直的
+horizontal 水平的
+Alignment 对齐
+Arrangement  安放
+Modifier 修饰符
+Preview 预览
+Top 上面
+Center 中间
+Bottom 底部
+Space 空间
+Evenly 平均地
+Between 在什么之间
+Around 周围
+Start 开始
+End 结束 
+
+Font 字体
+Size 尺寸
+Color 颜色
+
+Surface 表面
+Scaffold  脚手架
+Main 主要的
+Column 列
+Row  行
+Box 盒子
+
+override 覆盖
+super 上级 超级
+activity 活动
